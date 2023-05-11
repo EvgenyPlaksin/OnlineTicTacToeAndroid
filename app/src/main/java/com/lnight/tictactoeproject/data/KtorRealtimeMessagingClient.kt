@@ -1,9 +1,12 @@
 package com.lnight.tictactoeproject.data
 
 import io.ktor.client.*
-import io.ktor.client.features.websocket.*
+import io.ktor.client.plugins.websocket.webSocketSession
 import io.ktor.client.request.*
-import io.ktor.http.cio.websocket.*
+import io.ktor.websocket.Frame
+import io.ktor.websocket.WebSocketSession
+import io.ktor.websocket.close
+import io.ktor.websocket.readText
 import kotlinx.coroutines.flow.*
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
